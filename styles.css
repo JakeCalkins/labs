@@ -1,24 +1,65 @@
 body {
-    font-family: 'Work Sans', sans-serif;
-    border: 1px solid black;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85em;
+
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 25px;
+    font-size: 0.85em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(102, 55, 189);
+}
+
+li:hover {
+    background-color: black;
+    color: white;
+
 }
 
 h1 {
-    font-weight: 900;
-    font-size: 5em;
-    border: 1px solid black;
+    font-size: 3em;
+}
+
+.wrapper {
+    width: 80%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, [col] auto) ;
+    grid-template-rows: repeat(2, [row] auto);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
 
 }
 
-h3 {
-    font-weight: 200;
-    font-size: 2em;
-    border: 1px solid black;
-
+.title {
+    grid-column: col / span 6;
+    grid-row: row ;
+    padding: 0.75em;
+}
+.nav {
+    grid-column: col / span 1;
+    grid-row: row 2;
 }
 
-img {
-    border: 1px solid black;
-    width: 20em;
-    border-radius: 100%;
+.text {
+    grid-column: col 2 / span 5 ;
+    grid-row: row 2 ;
 }
